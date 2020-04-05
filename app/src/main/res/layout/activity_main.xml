@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dünya_genel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Dünya Geneli"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/toplam_ölüm_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Toplam Ölüm"
+        app:layout_constraintEnd_toEndOf="@+id/dünya_genel_tv"
+        app:layout_constraintStart_toStartOf="@+id/dünya_genel_tv"
+        app:layout_constraintTop_toBottomOf="@+id/dünya_genel_tv" />
+
+    <TextView
+        android:id="@+id/toplam_vaka_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Toplam Vaka"
+        app:layout_constraintEnd_toEndOf="@+id/toplam_ölüm_tv"
+        app:layout_constraintStart_toStartOf="@+id/toplam_ölüm_tv"
+        app:layout_constraintTop_toBottomOf="@+id/toplam_ölüm_tv" />
+
+    <TextView
+        android:id="@+id/toplam_iyilesen_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Toplam İyileşen"
+        app:layout_constraintEnd_toEndOf="@+id/toplam_vaka_tv"
+        app:layout_constraintStart_toStartOf="@+id/toplam_vaka_tv"
+        app:layout_constraintTop_toBottomOf="@+id/toplam_vaka_tv" />
+
+    <TextView
+        android:id="@+id/toplam_olum_degeri_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/toplam_ölüm_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toplam_ölüm_tv" />
+
+    <TextView
+        android:id="@+id/toplam_vaka_degeri_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/toplam_vaka_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toplam_vaka_tv" />
+
+    <TextView
+        android:id="@+id/toplam_iyilesen_degeri_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/toplam_iyilesen_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toplam_iyilesen_tv" />
+
+    <TextView
+        android:id="@+id/sık_bak_ülke_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Sık Bakılan Ülkeler"
+        app:layout_constraintEnd_toEndOf="@+id/toplam_iyilesen_tv"
+        app:layout_constraintStart_toStartOf="@+id/toplam_iyilesen_tv"
+        app:layout_constraintTop_toBottomOf="@+id/toplam_iyilesen_tv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sık_bak_ülke_tv"
+        tools:listitem="@layout/ulkeler_item" />
+
+    <TextView
+        android:id="@+id/haberler_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Haberler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/tümünü_gör_btn"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/tümünü_gör_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tümünü Gör"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
